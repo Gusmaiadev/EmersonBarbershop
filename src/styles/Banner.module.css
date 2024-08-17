@@ -44,8 +44,6 @@
   font-weight:  500;
   font-style: normal;
   font-size: 30px;
-  
-  
 }
 
 .space_one{
@@ -72,8 +70,71 @@
   width: 80%;
   height: 30vh;
   margin-bottom: -170px;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  box-shadow: 5px 5px 15px rgba(89, 89, 89, 0.5);
 }
+
+.box_info{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 60%;
+}
+
+.card_info{
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  align-items: center;
+  color: #000;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card_info h2{
+  font-family: "Barlow", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  padding: 5px;
+  margin-top: 5px;
+  border-bottom: 3px solid #AB0A0A;
+}
+
+
+.box_descr{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40%;
+}
+.card_data{
+  display: flex;
+  height: 100%;
+  flex: 1;
+  justify-content: flex-start;
+  align-items: center;
+  color: #000;
+  flex-direction: column;
+}
+
+.card_data p{
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 10px;
+  width: 60%;
+}
+
+
+
 
 
 
