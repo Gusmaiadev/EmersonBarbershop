@@ -31,9 +31,8 @@
   font-family: "Barlow", sans-serif;
   font-weight: 800;
   font-style: normal;
-  color: #000000;
   justify-content: center;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .nav ul, li {
@@ -42,12 +41,19 @@
 
 .nav ul {
   display: flex;
+  
 }
 
 .nav li {
   display: flex;
   margin: 0 20px;
   cursor: pointer;
+  color: #000000;
+}
+
+.nav li:hover{
+  color:#e53939;
+  transition: 0.3s all linear;
 }
 
 .button_agendar {
@@ -96,6 +102,29 @@
   position: fixed;
   z-index: 999;
 }
+
+.menuSidebar ul, li{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.menuSidebar li{
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+  color: #fff;
+  
+  padding: 30px;
+}
+
+.menuSidebar li:hover{
+  color: #e53939;
+  background-color: #fff;
+}
+
+
 
 @media (max-width: 1170px) {
   .nav {
