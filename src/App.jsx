@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import Page from "./pages/Page"
 
 
 function App() {
@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-      <h1></h1>
+      <Page/>
     </>
   )
 }
