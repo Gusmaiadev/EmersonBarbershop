@@ -1,0 +1,175 @@
+.container_datablockone{
+  width: 100%;
+  height: 40rem;
+  margin-top: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.box_datablockone{
+  width: 80%;
+  height: 100%;
+  display: flex;
+}
+
+
+.block_text{
+  display: flex;
+  width: 60%;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.block_image{
+  background-image: url('../assets/EmersonCorte.png');
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  display: flex;
+  width: 40%;
+}
+
+.block_text h2{
+  font-family: "Barlow", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 48px;
+  width: 60%;
+}
+
+.block_text p{
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #fff;
+  font-size: 20px;
+  width:70%;
+  margin-top: 30px;
+}
+
+
+/* Números */
+
+.box_clients{
+  width: 60%;
+  display: flex;
+  margin-top: 30px;
+}
+
+.satisfation_clients, .years{
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  color: #fff;
+}
+
+.satisfation_clients h3, .years h3{
+  font-family: "Barlow", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 48px;
+  color: #fff;
+}
+
+.after{
+  color:#AB0A0A;
+}
+
+.satisfation_clients h4, .years h4{
+  font-family: "Barlow", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+.years h4{
+  width: 50%;
+}
+
+.satisfation_clients h4{
+  width: 90%;
+}
+
+
+
+@media (max-width:1060px){
+  .block_text h2{
+    font-size: 35px;
+    width: 90%;
+  }
+  .block_text p{
+    font-size: 16px;
+    width: 90%;
+  }
+  .satisfation_clients h3, .years h3{
+    font-size: 35px;
+  }
+  .block_text, .block_image{
+    width: 50%; 
+  }
+  .box_clients{
+    width: 100%;
+  }
+}
+
+
+@media (max-width:850px){
+  .box_datablockone{
+    flex-direction: column;
+  }
+  .block_text{
+    width: 100%;
+  }
+
+  .block_text h2{
+    text-align: center;
+  }
+
+  .block_text p{
+    width: 100%;
+  }
+  .years h4{
+    width: 100%;
+  }
+
+  .block_image{
+    width: 100%;
+    height: 100%;
+    margin-top: 40px;
+  }
+
+  .container_datablockone{
+    height: 50rem;
+    margin-top: 300px;
+  }
+}
+
+  @media (max-width:450px){
+    .container_datablockone{
+      margin-top: 250px;
+    }
+    .satisfation_clients h4, .years h4{
+        width: 100%;
+        font-size: 16px;
+    }
+    .satisfation_clients h3, .years h3{
+        font-size: 30px;
+    }
+    .years{
+        padding-left: 30px;  
+    }
+    .block_text h2{
+      font-size: 30px;
+    }
+
+    .block_text p{
+      font-size: 16px;
+    }
+  }
+

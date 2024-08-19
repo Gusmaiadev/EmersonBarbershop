@@ -1,5 +1,6 @@
 
 import Banner from "../components/Banner";
+import DataBlockOne from "../components/DataBlockOne";
 import Header from "../components/Header";
 
 
@@ -8,6 +9,7 @@ function Page(){
         <>
             <Header/>
             <Banner/>
+            <DataBlockOne/>
         </>
     )
 }

@@ -1,6 +1,6 @@
 .container_banner{
   width: 100%;
-  height: 80vh; 
+  height: 50rem; 
   background-image: url('../assets/Banner.png');
   background-size: cover; 
   background-position: center; 
@@ -66,16 +66,24 @@
 
 
 .container_info{
-  background-color: #fff;
-  width: 80%;
-  height: 30vh;
-  margin-bottom: -170px;
+  background-image: url('../assets/bg_babershop_listras.jpg');
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  width: 90%;
+  height: 18rem;
+  margin-bottom: -200px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   padding: 20px;
-  box-shadow: 5px 5px 15px rgba(89, 89, 89, 0.5);
+  box-shadow: 5px 10px 15px rgba(255, 30, 0, 0.1);
+}
+
+.container_info:hover{
+  box-shadow: 5px 5px 15px rgba(0, 26, 255, 0.2);
+  transition: 1s all linear;
 }
 
 .box_info{
@@ -90,11 +98,15 @@
 .card_info{
   display: flex;
   flex: 1;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   color: #000;
   flex-direction: column;
   height: 100%;
+}
+
+.card_info img{
+  width: 50px;
 }
 
 .card_info h2{
@@ -104,6 +116,7 @@
   padding: 5px;
   margin-top: 5px;
   border-bottom: 3px solid #AB0A0A;
+  color: #fff;
 }
 
 
@@ -120,7 +133,7 @@
   flex: 1;
   justify-content: flex-start;
   align-items: center;
-  color: #000;
+  color: #ffffff;
   flex-direction: column;
 }
 
@@ -172,6 +185,9 @@
   .text_atrativo{
     width: 80%;
   }
+  .card_data p{
+    width: 80%;
+  }
 }
 
 @media (max-width:770px){
@@ -191,8 +207,34 @@
   }
   .text_atrativo{
     width: 70%;
-    padding: 20px;
   }
+
+  .card_data p{
+   font-size: 14px;
+   width: 100%;
+   margin-top: -10px;
+  }
+
+  .card_info h2{
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .card_info img{
+    width: 40px;
+  }
+
+   .card_info{
+    justify-content: flex-end;
+   }
+
+   .card_data{
+    justify-content: flex-start;
+   }
+
+
+  
+  
   
 }
 @media (max-width:630px){
@@ -209,8 +251,11 @@
   }
   .text_atrativo{
     width: 75%;
-    padding: 20px;
   }
+  .container_info{
+    width: 95%;
+  }
+  
   
 }
 @media (max-width:470px){
@@ -221,6 +266,38 @@
     width: 80%;
     padding: 20px;
   }
+
+  .card_info img{
+    width: 30px;
+    margin-top: 30px;
+  }
+
+  .card_data p{
+    font-size: 12px;
+    width: 90%;
+   }
+ 
+   .card_info h2{
+     font-size: 14px;
+   }
+
+   .container_info{
+    padding: 0px;
+   }
+  
+   .card_data{
+    justify-content: flex-start;
+   }
+
+   .container_info{
+    width: 100%;
+    justify-content: center;
+  }
+
+  .container_info{
+    height: 15rem;
+  }
+ 
   
 }
 @media (max-width:370px){
