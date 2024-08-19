@@ -2,6 +2,7 @@
 import Banner from "../components/Banner";
 import DataBlockOne from "../components/DataBlockOne";
 import Header from "../components/Header";
+import InfoCard from "../components/InfoCard";
 
 
 function Page(){
@@ -10,6 +11,7 @@ function Page(){
             <Header/>
             <Banner/>
             <DataBlockOne/>
+            <InfoCard/>
         </>
     )
 }
