@@ -1,0 +1,50 @@
+.line_services_prices{
+  display: flex;
+  width: 100%;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.block_one, .block_two{
+  display: flex;
+  flex: 1;
+}
+
+.block_image_service{
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  margin-right: 20px;
+}
+.block_image_service img{
+  width: 64px;
+  height: 64px;
+}
+.block_price_service{
+  display: flex;
+  flex: 3;
+  flex-direction: column;
+}
+
+.block_price_service h5{
+  font-family: "Barlow", sans-serif;
+  font-weight: 800;
+  font-size: 24px;
+}
+
+.block_price_service p{
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: start;
+  margin-top: 15px;
+}
+
+.block_price_service span{
+  font-family: "Barlow", sans-serif;
+  font-weight: 800;
+  font-size: 24px;
+  margin-top: 10px;
+}
+

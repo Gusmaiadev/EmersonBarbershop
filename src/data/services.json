@@ -1,0 +1,26 @@
+[
+  {
+        "titleServiceOne": "CORTE SOCIAL",
+        "textServiceOne": "Nulla egestas sapien integer mi fermentum tellus tristique consequatolm pulvinar sagittis",
+        "priceServiceOne": "R$35",
+        "titleServiceTwo": "CORTE + PENTEADO",
+        "textServiceTwo": "Nulla egestas sapien integer mi fermentum tellus tristique consequatolm pulvinar sagittis",
+        "priceServiceTwo": "R$60"
+  },
+  {
+       "titleServiceOneColTwo": "CORTE DEGRADÊ",
+        "textServiceOneColTwo": "Nulla egestas sapien integer mi fermentum tellus tristique consequatolm pulvinar sagittis",
+        "priceServiceOneColTwo": "R$35",
+        "titleServiceTwoColTwo": "SOBRANCELHA",
+        "textServiceTwoColTwo": "Nulla egestas sapien integer mi fermentum tellus tristique consequatolm pulvinar sagittis",
+        "priceServiceTwoColTwo": "R$10"
+  },
+  {
+        "titleServiceOneColThree": "TINTURA",
+        "textServiceOneColThree": "Nulla egestas sapien integer mi fermentum tellus tristique consequatolm pulvinar sagittis",
+        "priceServiceOneColThree": "R$20",
+        "titleServiceTwoColThree": "BARBA COMPLETA",
+        "textServiceTwoColThree": "Nulla egestas sapien integer mi fermentum tellus tristique consequatolm pulvinar sagittis",
+        "priceServiceTwoColThree": "R$20"
+  }
+]

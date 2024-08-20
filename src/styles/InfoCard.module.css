@@ -7,7 +7,7 @@
     margin-top: 200px;
 }
 .box_infocard{
-    width: 80%;
+    width: 70%;
     height: 100rem;
     display: flex;
     align-items: center;
@@ -37,7 +37,7 @@
 
 .card_prices{
     width: 80%;
-    height: 830px;
+    height: 830PX;
     background-color: #fff;
     margin-top: 50px;
     display: flex;
@@ -47,21 +47,3 @@
     color: #000;
 }
 
-.line_services_prices{
-    display: flex;
-    width: 100%;
-}
-
-.block_one, .block_two{
-    display: flex;
-    flex: 1;
-}
-
-.block_image_service{
-    display: flex;
-    flex: 1;
-}
-.block_price_service{
-    display: flex;
-    flex: 2;
-}

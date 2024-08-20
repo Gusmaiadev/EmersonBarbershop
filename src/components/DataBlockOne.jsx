@@ -14,7 +14,7 @@ function DataBlockOne() {
           observer.disconnect(); // Desconecta o observer após a animação para evitar que seja disparada novamente
         }
       },
-      { threshold: 0.5 } // Quando 50% da seção estiver visível, dispara a animação
+      { threshold: 0.8 } // Quando 50% da seção estiver visível, dispara a animação
     );
 
     if (sectionRef.current) {
