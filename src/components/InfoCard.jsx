@@ -14,8 +14,8 @@ function InfoCard() {
     return (
         <section className={styles.container_infocard}>
             <div className={styles.box_infocard}>
-                <h3>Navegue pelos nossos serviços</h3>
-                <p>A Emerson BarberShop é conhecida pela alta 
+                <h3>Navegue pelos nossos<br/>serviços</h3>
+                <p className={styles.infocard_text}>A Emerson BarberShop é conhecida pela alta 
                 qualidade dos serviços prestados por barbeiros experientes,
                 garantindo satisfação e confiança a cada cliente.</p>
                 <div className={styles.card_prices}>

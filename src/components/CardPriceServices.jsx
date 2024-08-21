@@ -14,8 +14,8 @@ function CardPriceServices({titleServiceOne, textServiceOne, priceServiceOne, im
                                 <span>{priceServiceOne}</span>
                         </div>
                 </div>
-                <div className={styles.block_two}>
-                        <div className={styles.block_one}>
+                
+                        <div className={styles.block_two}>
                                 <div className={styles.block_image_service}>
                                         <img src={imageServiceTwo} alt="Corte Social" />
                                 </div>
@@ -25,7 +25,7 @@ function CardPriceServices({titleServiceOne, textServiceOne, priceServiceOne, im
                                         <span>{priceServiceTwo}</span>
                                 </div>
                         </div>
-                </div>
+                
 </div>
   );
 }
