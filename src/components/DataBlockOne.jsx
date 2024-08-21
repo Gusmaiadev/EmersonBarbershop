@@ -42,7 +42,7 @@ function DataBlockOne() {
           <div className={styles.box_clients}>
             <div className={styles.satisfation_clients}>
               <h3>
-                {hasAnimated && <CountUp start={0} end={98} duration={2.5} />}
+                {hasAnimated && <CountUp start={0} end={99} duration={2.5} />}
                 <span className={styles.after}>%</span>
               </h3>
               <h4>Satisfação dos clientes</h4>
