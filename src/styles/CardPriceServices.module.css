@@ -48,3 +48,16 @@
   margin-top: 10px;
 }
 
+@media (max-width: 800px){
+  .block_price_service h5, .block_price_service span{
+    font-size: 18px;
+  }
+
+  .block_image_service img{
+    width: 50px;
+    height: 50px;
+  }
+  
+}
+
+
