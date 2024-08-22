@@ -96,4 +96,48 @@
   .box_datablocktwo{
     width: 80%;
   }
+  .block_image{
+    width: 100%;
+    height: 40%;
+  }
+
+  .block_text{
+    height: 60%;
+    padding: 40px;
+  }
+
+  .container_datablocktwo{
+    height: 50rem;
+  }
+}
+
+@media (max-width:660px){
+  .block_text{
+    padding: 30px;
+    justify-content: center;
+    align-items: center;
+  }
+  .block_text h2{
+    text-align: center;
+    width: 100%;
+    font-size: 30px;
+  }
+  .block_text p{
+    width: 100%;
+    font-size: 16px;
+  }
+}
+
+
+@media (max-width:460px){
+  .block_text h2 {
+    font-size: 25px;
+    width: 100%;
+  }
+  .button{
+    margin-top: 30px;
+  }
+  .box_datablocktwo{
+      height: 70rem;
+  }
 }

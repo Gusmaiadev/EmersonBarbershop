@@ -30,7 +30,6 @@ function DataBlockTwo() {
           className={styles.block_image}
           style={{ backgroundImage: `url(${images[currentImage]})` }}
         >
-          ...
         </div>
         <div className={styles.block_text}>
           <h2>TEMOS UMA ESTRUTURA COMPLETA PARA SEU ATENDIMENTO</h2>
