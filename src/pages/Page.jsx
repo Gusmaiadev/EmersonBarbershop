@@ -1,5 +1,6 @@
 
 import Banner from "../components/Banner";
+import CaroselTeam from "../components/CaroselTeam";
 import DataBlockOne from "../components/DataBlockOne";
 import DataBlockTwo from "../components/DataBlockTwo";
 import Header from "../components/Header";
@@ -14,6 +15,7 @@ function Page(){
             <DataBlockOne/>
             <InfoCard/>
             <DataBlockTwo/>
+            <CaroselTeam/>
             
         </>
     )

@@ -8,4 +8,5 @@
 body{
   background-color: black;
   height: 800vh;
+  overflow-x: hidden;
 }

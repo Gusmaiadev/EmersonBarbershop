@@ -1,0 +1,234 @@
+.block_bg {
+  width: 100%;
+  height: 80%; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.box_carosel {
+  width: 100%;
+  height: 60rem; 
+  margin-top: 200px;
+  background-image: url('../assets/BG_CAROSEL.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.title_text {
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.title {
+  color: #fff;
+  text-align: center;
+  font-family: "Barlow", sans-serif;
+  font-weight: 800;
+  font-size: 60px;
+}
+
+.title_blue {
+  color: #1738AA;
+}
+
+.title_red {
+  color: #960C0C;
+}
+
+.carouselContainer {
+  width: 100%; /* Carrossel ocupando toda a largura */
+  position: relative;
+}
+
+.list {
+  height: 100%; /* Altura do carrossel correspondente à seção */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.slide {
+  width: 500px; /* Aumentando a largura do slide */
+  height: 600px; /* Aumentando a altura do slide */
+  position: absolute;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  transition: transform 0.1s, opacity 1s;
+  padding: 10px;
+  margin: 0 20px; /* Adicionando margem lateral */
+  border-radius: 20px;
+  border: 2px solid #fff;
+  
+  
+}
+
+.redCard {
+  background-color: #6b0808;
+}
+
+.blueCard {
+  background-color: blue;
+}
+
+.slideImage {
+  width: 300px; /* Aumentando o tamanho da imagem */
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 2px solid #fff;
+}
+
+.slideText {
+  font-family: "Barlow", sans-serif;
+  font-weight: 800;
+  font-size: 30px;
+  text-transform: uppercase;
+  margin: 20px 0px 50px 0px;
+}
+
+.slideButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.slideButtons button {
+  background-color: #000000;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.instagramButton {
+  display: flex;
+  align-items: center; 
+}
+
+.instagramIcon{
+  margin-left: 20px;
+  font-size: 25px;
+}
+
+.slideButtons button:hover {
+  background-color: #333333; /* Mudança de cor ao passar o mouse */
+}
+
+.act {
+  opacity: 1;
+}
+
+.prev {
+  cursor: pointer;
+  transform: translateX(-660px) scale(0.85); /* Ajuste de posição */
+}
+
+.next {
+  cursor: pointer;
+  transform: translateX(660px) scale(0.85); /* Ajuste de posição */
+}
+
+.newNext {
+  cursor: pointer;
+  transform: translateX(2020px) scale(0.85); /* Ajuste de posição */
+}
+
+.swipe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+/* Ajuste para a tela pequena */
+@media (max-width: 1600px) {
+  .prev {
+    cursor: pointer;
+    transform: translateX(-560px) scale(0.85); /* Ajuste de posição */
+  }
+  
+  .next {
+    cursor: pointer;
+    transform: translateX(560px) scale(0.85); /* Ajuste de posição */
+  }
+  
+}
+
+@media (max-width: 980px) {
+  .prev {
+    cursor: pointer;
+    transform: translateX(-300px) scale(0.85); /* Ajuste de posição */
+  }
+  
+  .next {
+    cursor: pointer;
+    transform: translateX(300px) scale(0.85); /* Ajuste de posição */
+  }
+  
+  .slideImage{
+    width: 180px;
+    height: 180px;
+  }
+  .slide{
+    width: 300px;
+    height: 500px;
+  }
+  .title{
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  .prev {
+    cursor: pointer;
+    transform: translateX(-250px) scale(0.85); /* Ajuste de posição */
+  }
+  
+  .next {
+    cursor: pointer;
+    transform: translateX(250px) scale(0.85); /* Ajuste de posição */
+  }
+  
+  .slideImage{
+    width: 150px;
+    height: 150px;
+  }
+  .slide{
+    width: 250px;
+    height: 400px;
+  }
+  .slideText{
+    font-size: 20px;
+  }
+  .slideButtons button{
+    font-size: 16px;
+    padding: 5px 10px;
+  }
+  .instagramIcon{
+    font-size: 16px;
+  }
+  .box_carosel{
+    height: 50rem;
+  }
+}
