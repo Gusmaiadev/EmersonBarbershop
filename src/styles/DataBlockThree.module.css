@@ -1,3 +1,167 @@
+.container_datablockthree {
+  width: 100%;
+  height: 40rem;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
 
+.box_datablockthree {
+  width: 80%;
+  height: 100%;
+  display: flex;
+}
+
+.block_image {
+  display: flex;
+  flex: 45%;
+  background-image: url('../assets/CleitonCorte.png');
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
+}
+
+.block_text {
+  display: flex;
+  flex: 55%;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 50px;
+  background-image: url('../assets/bg_cortes.png');
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
+}
+
+.block_text h2 {
+  font-family: "Barlow", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 48px;
+  width: 60%;
+}
+
+.block_text p {
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  width: 80%;
+  margin-top: 30px;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.button {
+  background-color: #AB0A0A;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  width: 180px;
+  cursor: pointer;
+  margin-top: 60px;
+}
+
+
+@media(max-width:1440px){
+  .block_text{
+    padding: 20px 20px 20px 50px;
+  }
+  .container_datablockthree{
+    height: 45rem;
+  }
+}
+
+@media(max-width:1300px){
+  .block_text h2 {
+    font-size: 40px;
+  }
+  .block_text p {
+    font-size: 17px;
+  }
+}
+
+@media(max-width:1100px){
+  .box_datablockthree{
+    width: 95%;
+  }
+  .block_text h2{
+    width: 90%;
+  }
+}
+
+
+@media (max-width:850px){
+  .box_datablockthree{
+    width: 80%;
+    flex-direction: column;
+  }
+  .block_image{
+    width: 100%;
+    height: 40%;
+    
+  }
+
+  .block_text{
+    height: 60%;
+    padding: 40px;
+  }
+
+  .container_datablockthree{
+    height: 55rem;
+  }
+  .block_text p{
+    width: 100%;
+    font-size: 16px;
+  }
+}
+
+@media (max-width:660px){
+  .block_text{
+    padding: 30px;
+    justify-content: center;
+    align-items: center;
+  }
+  .block_text h2{
+    text-align: center;
+    width: 100%;
+    font-size: 30px;
+  }
+  .block_text p{
+    width: 100%;
+    font-size: 16px;
+  }
+  .container_datablockthree{
+    height: 60rem;
+}
+}
+
+
+@media (max-width:460px){
+  .block_text h2 {
+    font-size: 20px;
+    width: 100%;
+  }
+  .button{
+    margin-top: 30px;
+  }
+
+  .block_text {
+    padding: 10px;
+    max-height: 70% !important;
+  }
+  
+  .container_datablockthree{
+    margin-top: 150px;
+  }
+  .block_image{
+    max-height: 30% !important;
+  }
+}
 
 
