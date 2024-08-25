@@ -11,7 +11,7 @@ import photos7 from '../assets/foto7.png'
 import photos8 from '../assets/foto8.png'
 import photos9 from '../assets/foto9.png'
 
-function PhotoGallery(){
+function PhotoGallery({id}){
   const [expandedImage, setExpandedImage] = useState(null);
 
   const handleImageClick = (image) => {
@@ -23,7 +23,7 @@ function PhotoGallery(){
   };
 
   return(
-    <section className={styles.container_gallery}>
+    <section className={styles.container_gallery} id={id}>
       <div className={styles.column}>
         <img src={photos1} alt="Foto corte" onClick={() => handleImageClick(photos1)} />
         <img src={photos2} alt="Foto corte" onClick={() => handleImageClick(photos2)} />

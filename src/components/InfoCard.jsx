@@ -10,9 +10,9 @@ import IconCortePenteado from '../assets/icone_corte_penteado.png';
 import IconSobrancelha from '../assets/icone_sobrancelha.png';
 import IconTintura from '../assets/icone_tintura.png';
 
-function InfoCard() {
+function InfoCard({id}) {
     return (
-        <section className={styles.container_infocard}>
+        <section className={styles.container_infocard} id={id}>
             <div className={styles.box_infocard}>
                 <h3>Navegue pelos nossos<br/>serviços</h3>
                 <p className={styles.infocard_text}>A Emerson BarberShop é conhecida pela alta 

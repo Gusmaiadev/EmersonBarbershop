@@ -67,6 +67,11 @@
   margin-top: 60px;
 }
 
+.button:hover {
+  background-color: #6d0909;
+  transition: 0.2s all linear;
+}
+
 
 @media(max-width:1440px){
   .block_text{

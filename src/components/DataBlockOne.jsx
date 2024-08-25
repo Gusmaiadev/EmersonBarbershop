@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import styles from '../styles/DataBlockOne.module.css';
 import CountUp from 'react-countup';
 
-function DataBlockOne() {
+function DataBlockOne({id}) {
   const [hasAnimated, setHasAnimated] = useState(false);
   const sectionRef = useRef(null);
 
@@ -29,7 +29,7 @@ function DataBlockOne() {
   }, []);
 
   return (
-    <section ref={sectionRef} className={styles.container_datablockone}>
+    <section ref={sectionRef} className={styles.container_datablockone} id={id}>
       <div className={styles.box_datablockone}>
         <div className={styles.block_text}>
           <h2>A barbearia que você procura está aqui</h2>

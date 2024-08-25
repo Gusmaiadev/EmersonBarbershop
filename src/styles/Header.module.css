@@ -6,6 +6,8 @@
   justify-content: center;
   align-items: center;
   color: #fff;
+  position: fixed;
+  z-index: 1000;
 }
 
 .container {
@@ -76,6 +78,10 @@
   border-radius: 10px;
   width: 180px;
   cursor: pointer;
+}
+.button:hover {
+  background-color: #6d0909;
+  transition: 0.2s all linear;
 }
 
 /* Menu Hamburguer */

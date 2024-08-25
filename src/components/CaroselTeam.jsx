@@ -10,7 +10,7 @@ import DanPhoto from '../assets/foto_dan.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 
-function CaroselTeam() {
+function CaroselTeam({id}) {
   const [activeIndex, setActiveIndex] = useState(0);
   const intervalRef = useRef(null);
   const interactionTimeoutRef = useRef(null);
@@ -20,39 +20,44 @@ function CaroselTeam() {
       image: EmersonPhoto,
       text: 'Emerson',
       button1: 'Instagram',
-      button2: 'Marcar horário'
+      button2: 'Marcar horário',
+      link1: 'https://www.instagram.com/emersonbarbershop_/', // Link para o Instagram do Emerson
+      link2: 'https://booksy.com/pt-br/30413_emerson-barber-shop_barbearias_1039031_santo-andre/staffer/49572#ba_s=seo' // Link para agendar com o Emerson
     },
     {
       image: CleitonPhoto,
       text: 'Cleitinho',
       button1: 'Instagram',
-      button2: 'Marcar horário'
+      button2: 'Marcar horário',
+      link1: 'https://www.instagram.com/cleyton.p.sousa/', // Link para o Instagram do Cleiton
+      link2: 'https://booksy.com/pt-br/30413_emerson-barber-shop_barbearias_1039031_santo-andre/staffer/222888#ba_s=seo' // Link para agendar com o Cleiton
     },
     {
       image: DanielPhoto,
       text: 'Daniel',
       button1: 'Instagram',
-      button2: 'Marcar horário'
+      button2: 'Marcar horário',
+      link1: 'https://www.instagram.com/____d.araujo09/', // Link para o Instagram do Daniel
+      link2: 'https://booksy.com/pt-br/30413_emerson-barber-shop_barbearias_1039031_santo-andre/staffer/53570#ba_s=seo' // Link para agendar com o Daniel
     },
     {
       image: DanPhoto,
       text: 'Dan',
       button1: 'Instagram',
-      button2: 'Marcar horário'
+      button2: 'Marcar horário',
+      link1: 'https://instagram.com/dan', // Link para o Instagram do Dan
+      link2: 'https://booksy.com/pt-br/30413_emerson-barber-shop_barbearias_1039031_santo-andre/staffer/359961#ba_s=seo' // Link para agendar com o Dan
     }
   ];
 
-  // Função para ir ao próximo slide
   const next = () => {
     setActiveIndex((prevIndex) => (prevIndex + 1) % slides.length);
   };
 
-  // Função para ir ao slide anterior
   const prev = () => {
     setActiveIndex((prevIndex) => (prevIndex - 1 + slides.length) % slides.length);
   };
 
-  // Configura o intervalo automático de 3 segundos
   const startAutoSlide = () => {
     intervalRef.current = setInterval(() => {
       next();
@@ -63,7 +68,6 @@ function CaroselTeam() {
     clearInterval(intervalRef.current);
   };
 
-  // Reinicia o modo automático 5 segundos após a última interação do usuário
   const resetInteractionTimeout = () => {
     clearTimeout(interactionTimeoutRef.current);
     stopAutoSlide();
@@ -73,7 +77,7 @@ function CaroselTeam() {
   };
 
   useEffect(() => {
-    startAutoSlide(); // Inicia o modo automático ao carregar
+    startAutoSlide();
 
     return () => {
       stopAutoSlide();
@@ -81,7 +85,6 @@ function CaroselTeam() {
     };
   }, []);
 
-  // Configura o Hammer.js para capturar os gestos de swipe
   const swipeRef = useRef(null);
   useEffect(() => {
     if (!swipeRef.current) return;
@@ -102,7 +105,7 @@ function CaroselTeam() {
   }, []);
 
   return (
-    <section className={styles.box_carosel}>
+    <section className={styles.box_carosel} id={id}>
       <div className={styles.title_text}>
         <h2 className={styles.title}>
           <span className={styles.title_blue}>CONHEÇA</span>
@@ -117,14 +120,12 @@ function CaroselTeam() {
             {slides.map((slide, index) => (
               <div
                 key={index}
-                className={`
-                  ${styles.slide} 
+                className={`${styles.slide} 
                   ${index === activeIndex ? styles.act : ''} 
                   ${index === (activeIndex - 1 + slides.length) % slides.length ? styles.prev : ''} 
                   ${index === (activeIndex + 1) % slides.length ? styles.next : ''}
                   ${index === (activeIndex + 2) % slides.length ? styles.newNext : ''}
-                  ${index % 2 === 0 ? styles.redCard : styles.blueCard}
-                `}
+                  ${index % 2 === 0 ? styles.redCard : styles.blueCard}`}
                 onClick={() => {
                   if (index === (activeIndex + 1) % slides.length) next();
                   if (index === (activeIndex - 1 + slides.length) % slides.length) prev();
@@ -134,11 +135,15 @@ function CaroselTeam() {
                 <img src={slide.image} alt={`Slide ${index + 1}`} className={styles.slideImage} />
                 <div className={styles.slideText}>{slide.text}</div>
                 <div className={styles.slideButtons}>
-                  <button className={styles.instagramButton}>
-                    {slide.button1}
-                    <FontAwesomeIcon icon={faInstagram} className={styles.instagramIcon} />
-                  </button>
-                  <button>{slide.button2}</button>
+                  <a href={slide.link1} target="_blank" rel="noopener noreferrer">
+                    <button className={styles.instagramButton}>
+                      {slide.button1}
+                      <FontAwesomeIcon icon={faInstagram} className={styles.instagramIcon} />
+                    </button>
+                  </a>
+                  <a href={slide.link2} target="_blank" rel="noopener noreferrer">
+                    <button>{slide.button2}</button>
+                  </a>
                 </div>
               </div>
             ))}

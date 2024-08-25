@@ -7,8 +7,10 @@ import DataBlockTwo from "../components/DataBlockTwo";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import InfoCard from "../components/InfoCard";
+import Maps from "../components/Maps";
 import PhotoGallery from "../components/PhotoGallery";
 import PhotoGalleryMobile from "../components/PhotoGalleryMobile";
+import SpaceHeader from "../components/SpaceHeader";
 
 
 
@@ -16,16 +18,18 @@ import PhotoGalleryMobile from "../components/PhotoGalleryMobile";
 function Page(){
     return(
         <>
-            <Header/>
+            <Header />
+            <SpaceHeader/>
             <Banner/>
-            <DataBlockOne/>
-            <InfoCard/>
-            <DataBlockTwo/>
-            <CaroselTeam/>
-            <DataBlockThree/>
-            <PhotoGallery/>
-            <PhotoGalleryMobile/>
-            <Footer/>
+            <DataBlockOne id='section1'/>
+            <InfoCard id='section2'/>
+            <DataBlockTwo id='section3'/>
+            <CaroselTeam id='section4'/>
+            <DataBlockThree id='section5'/>
+            <PhotoGallery id='section6'/>
+            <PhotoGalleryMobile id='section8'/>
+            <Footer id='section7'/>
+            <Maps/>
             
         </>
     )

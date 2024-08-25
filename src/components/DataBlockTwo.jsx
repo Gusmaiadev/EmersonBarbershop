@@ -5,7 +5,7 @@ import ImgEstrutura2 from '../assets/estrutura2.png';
 import ImgEstrutura3 from '../assets/estrutura3.png';
 import ImgEstrutura4 from '../assets/estrutura4.png';
 
-function DataBlockTwo() {
+function DataBlockTwo({id}) {
   const [currentImage, setCurrentImage] = useState(0);
 
   const images = [
@@ -24,7 +24,7 @@ function DataBlockTwo() {
   }, []);
 
   return (
-    <section className={styles.container_datablocktwo}>
+    <section className={styles.container_datablocktwo} id={id}>
       <div className={styles.box_datablocktwo}>
         <div
           className={styles.block_image}
@@ -39,7 +39,8 @@ function DataBlockTwo() {
              garantir conforto e uma experiência excepcional, assegurando
              que nossos clientes recebam um serviço de qualidade superior
              em um ambiente acolhedor.</p>
-          <a href="#"><button className={styles.button}>AGENDAR HORÁRIO</button></a>
+          <a target='_blank' href="https://booksy.com/pt-br/30413_emerson-barber-shop_barbearias_1039031_santo-andre?do=invite&_branch_match_id=1327122588941711426&utm_medium=merchant_customer_invite&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs%2FVDzbLcEwzCjZx8k4CABJnWTAiAAAA#ba_s=seo">
+          <button className={styles.button}>AGENDAR HORÁRIO</button></a>
         </div>
       </div>
     </section>

@@ -12,20 +12,7 @@ function Header() {
         setMenuOpen(prevState => !prevState);
     };
 
-    useEffect(() => {
-        // Adiciona a classe no-scroll ao body quando o menu está aberto
-        if (menuOpen) {
-            document.body.classList.add(styles.noScroll);
-        } else {
-            document.body.classList.remove(styles.noScroll);
-        }
-
-        // Remove a classe no-scroll quando o componente é desmontado
-        return () => {
-            document.body.classList.remove(styles.noScroll);
-        };
-    }, [menuOpen]);
-
+    
     return (
         <>
             <header className={styles.header}>
@@ -39,8 +26,9 @@ function Header() {
                             <li><Link to="section2" smooth={true} duration={500} onClick={toggleMenu}>SERVIÇOS</Link></li>
                             <li><Link to="section3" smooth={true} duration={500} onClick={toggleMenu}>ESTRUTURA</Link></li>
                             <li><Link to="section4" smooth={true} duration={500} onClick={toggleMenu}>BARBEIROS</Link></li>
-                            <li><Link to="section5" smooth={true} duration={500} onClick={toggleMenu}>GALERIA</Link></li>
-                            <li><Link to="section6" smooth={true} duration={500} onClick={toggleMenu}>CONTATO</Link></li>
+                            <li><Link to="section5" smooth={true} duration={500} onClick={toggleMenu}>CORTES</Link></li>
+                            <li><Link to="section6" smooth={true} duration={500} onClick={toggleMenu}>GALERIA</Link></li>
+                            <li><Link to="section7" smooth={true} duration={500} onClick={toggleMenu}>CONTATO</Link></li>
                         </ul>
                     </nav>
                     <div className={styles.box_menu} onClick={toggleMenu}>
@@ -51,7 +39,8 @@ function Header() {
                         />
                     </div>
                     <div className={styles.button_agendar}>
-                        <a href="#"><button className={styles.button}>AGENDAR HORÁRIO</button></a>
+                        <a target='_blank' href="https://booksy.com/pt-br/30413_emerson-barber-shop_barbearias_1039031_santo-andre?do=invite&_branch_match_id=1327122588941711426&utm_medium=merchant_customer_invite&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs%2FVDzbLcEwzCjZx8k4CABJnWTAiAAAA#ba_s=seo">
+                        <button className={styles.button}>AGENDAR HORÁRIO</button></a>
                     </div>
                 </div>
             </header>
@@ -62,8 +51,9 @@ function Header() {
                         <li><Link to="section2" smooth={true} duration={500} onClick={toggleMenu}>SERVIÇOS</Link></li>
                         <li><Link to="section3" smooth={true} duration={500} onClick={toggleMenu}>ESTRUTURA</Link></li>
                         <li><Link to="section4" smooth={true} duration={500} onClick={toggleMenu}>BARBEIROS</Link></li>
-                        <li><Link to="section5" smooth={true} duration={500} onClick={toggleMenu}>GALERIA</Link></li>
-                        <li><Link to="section6" smooth={true} duration={500} onClick={toggleMenu}>CONTATO</Link></li>
+                        <li><Link to="section5" smooth={true} duration={500} onClick={toggleMenu}>CORTES</Link></li>
+                        <li><Link to="section8" smooth={true} duration={500} onClick={toggleMenu}>GALERIA</Link></li>
+                        <li><Link to="section7" smooth={true} duration={500} onClick={toggleMenu}>CONTATO</Link></li>
                     </ul>
                 </div>
             )}

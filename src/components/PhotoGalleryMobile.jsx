@@ -14,7 +14,7 @@ import photos7 from '../assets/foto7.png';
 import photos8 from '../assets/foto8.png';
 import photos9 from '../assets/foto9.png';
 
-function PhotoGalleryMobile() {
+function PhotoGalleryMobile({id}) {
   const [selectedImage, setSelectedImage] = useState(null);
   const photos = [photos1, photos2, photos3, photos4, photos5, photos6, photos7, photos8, photos9];
 
@@ -56,7 +56,7 @@ function PhotoGalleryMobile() {
   }, []);
 
   return (
-    <section className={styles.galeryMobi_container}>
+    <section className={styles.galeryMobi_container} id={id}>
       <Slider {...settings}>
         {photos.map((photo, index) => (
           <div key={index} onClick={() => openModal(photo)}>

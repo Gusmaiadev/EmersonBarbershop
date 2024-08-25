@@ -108,6 +108,10 @@
   gap: 10px;
 }
 
+.slideButtons a{
+  text-decoration: none;
+}
+
 .slideButtons button {
   background-color: #000000;
   border: none;
@@ -121,6 +125,7 @@
   font-weight: 600;
   font-size: 20px;
   text-transform: uppercase;
+  
 }
 
 .instagramButton {

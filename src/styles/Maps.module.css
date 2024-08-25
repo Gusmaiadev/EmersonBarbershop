@@ -1,0 +1,9 @@
+.maps_container{
+  width: 100%;
+  height: 20rem;
+  background-image: url('../assets/maps.png');
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+}
+
