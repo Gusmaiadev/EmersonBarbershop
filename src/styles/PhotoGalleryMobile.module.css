@@ -72,16 +72,6 @@
 }
 }
 
-@media(max-width:500px){
-  .galeryMobi_container :global(.slick-slide img) {
-    max-width: 90%;
-    max-height: 90%;
-    object-fit: contain;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    border: 1px solid #fff;
-  }
-}
+
 
 

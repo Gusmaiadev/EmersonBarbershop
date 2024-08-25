@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
 import styles from '../styles/Header.module.css';
 import Logo from '../assets/logo.png';
@@ -9,8 +9,22 @@ function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
 
     const toggleMenu = () => {
-        setMenuOpen(!menuOpen);
+        setMenuOpen(prevState => !prevState);
     };
+
+    useEffect(() => {
+        // Adiciona a classe no-scroll ao body quando o menu está aberto
+        if (menuOpen) {
+            document.body.classList.add(styles.noScroll);
+        } else {
+            document.body.classList.remove(styles.noScroll);
+        }
+
+        // Remove a classe no-scroll quando o componente é desmontado
+        return () => {
+            document.body.classList.remove(styles.noScroll);
+        };
+    }, [menuOpen]);
 
     return (
         <>
@@ -39,7 +53,6 @@ function Header() {
                     <div className={styles.button_agendar}>
                         <a href="#"><button className={styles.button}>AGENDAR HORÁRIO</button></a>
                     </div>
-                    
                 </div>
             </header>
             {menuOpen && (

@@ -4,6 +4,7 @@ import CaroselTeam from "../components/CaroselTeam";
 import DataBlockOne from "../components/DataBlockOne";
 import DataBlockThree from "../components/DataBlockThree";
 import DataBlockTwo from "../components/DataBlockTwo";
+import Footer from "../components/Footer";
 import Header from "../components/Header";
 import InfoCard from "../components/InfoCard";
 import PhotoGallery from "../components/PhotoGallery";
@@ -24,6 +25,7 @@ function Page(){
             <DataBlockThree/>
             <PhotoGallery/>
             <PhotoGalleryMobile/>
+            <Footer/>
             
         </>
     )

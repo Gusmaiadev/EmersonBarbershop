@@ -25,6 +25,10 @@
   width: 100px;
 }
 
+.noScroll {
+  overflow: hidden;
+}
+
 .nav {
   display: flex;
   flex: 5;
