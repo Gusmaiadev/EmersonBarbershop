@@ -5,6 +5,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .box_carosel {
@@ -15,6 +16,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  overflow: hidden;
 }
 
 .title_text {
@@ -41,12 +43,15 @@
 }
 
 .carouselContainer {
-  width: 100%; /* Carrossel ocupando toda a largura */
+  width: 100%; 
   position: relative;
+  
+  
 }
 
 .list {
-  height: 100%; /* Altura do carrossel correspondente à seção */
+  height: 100%; 
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -69,8 +74,7 @@
   margin: 0 20px; /* Adicionando margem lateral */
   border-radius: 20px;
   border: 2px solid #fff;
-  
-  
+
 }
 
 .redCard {
@@ -139,17 +143,20 @@
 
 .prev {
   cursor: pointer;
-  transform: translateX(-660px) scale(0.85); /* Ajuste de posição */
+  transform: translateX(-560px) scale(0.85); /* Ajuste de posição */
+  position: absolute;
 }
 
 .next {
   cursor: pointer;
-  transform: translateX(660px) scale(0.85); /* Ajuste de posição */
+  transform: translateX(560px) scale(0.85); /* Ajuste de posição */
+  overflow: hidden;
 }
 
 .newNext {
   cursor: pointer;
-  transform: translateX(2020px) scale(0.85); /* Ajuste de posição */
+  transform: translateX(560px) scale(0.85); /* Ajuste de posição */
+  overflow: hidden;
 }
 
 .swipe {
