@@ -45,7 +45,7 @@ function CaroselTeam({id}) {
       text: 'Dan',
       button1: 'Instagram',
       button2: 'Marcar horário',
-      link1: 'https://instagram.com/dan', // Link para o Instagram do Dan
+      link1: 'https://www.instagram.com/d4n.bernd/', // Link para o Instagram do Dan
       link2: 'https://booksy.com/pt-br/30413_emerson-barber-shop_barbearias_1039031_santo-andre/staffer/359961#ba_s=seo' // Link para agendar com o Dan
     }
   ];
