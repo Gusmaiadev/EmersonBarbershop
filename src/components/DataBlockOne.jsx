@@ -3,8 +3,12 @@ import { useSpring, animated } from '@react-spring/web';
 import styles from '../styles/DataBlockOne.module.css';
 
 function DataBlockOne({ id }) {
-  const [hasAnimated, setHasAnimated] = useState(false);
   const sectionRef = useRef(null);
+
+  // Detecta se o dispositivo é um iPhone
+  const isIphone = /iPhone/i.test(navigator.userAgent);
+
+  const [hasAnimated, setHasAnimated] = useState(isIphone);
 
   const satisfactionProps = useSpring({
     number: hasAnimated ? 99 : 0,
@@ -19,6 +23,10 @@ function DataBlockOne({ id }) {
   });
 
   useEffect(() => {
+    if (isIphone) {
+      return; // Não faz nada se for iPhone, números já estão exibidos
+    }
+
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {
@@ -38,7 +46,7 @@ function DataBlockOne({ id }) {
         observer.unobserve(sectionRef.current);
       }
     };
-  }, []);
+  }, [isIphone]);
 
   return (
     <section ref={sectionRef} className={styles.container_datablockone} id={id}>
@@ -54,14 +62,18 @@ function DataBlockOne({ id }) {
           <div className={styles.box_clients}>
             <div className={styles.satisfation_clients}>
               <h3>
-                <animated.span>{satisfactionProps.number.to(n => n.toFixed(0))}</animated.span>
+                {isIphone ? 99 : (
+                  <animated.span>{satisfactionProps.number.to(n => n.toFixed(0))}</animated.span>
+                )}
                 <span className={styles.after}>%</span>
               </h3>
               <h4>Satisfação dos clientes</h4>
             </div>
             <div className={styles.years}>
               <h3>
-                <animated.span>{experienceProps.number.to(n => n.toFixed(0))}</animated.span>
+                {isIphone ? 10 : (
+                  <animated.span>{experienceProps.number.to(n => n.toFixed(0))}</animated.span>
+                )}
                 <span className={styles.after}>+</span>
               </h3>
               <h4>anos de experiência</h4>
