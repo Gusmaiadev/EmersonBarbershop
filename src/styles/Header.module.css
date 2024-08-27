@@ -100,7 +100,7 @@
 }
 
 .menuSidebar {
-  top: 6rem;
+  top: 2rem;
   bottom: 0;
   right: 0;
   background-color: #e53939;
@@ -126,7 +126,7 @@
   font-weight: 500;
   color: #fff;
   
-  padding: 30px;
+  padding: 25px;
 }
 
 .menuSidebar li:hover{

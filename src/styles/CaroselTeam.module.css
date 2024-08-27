@@ -116,7 +116,6 @@
   background-color: #000000;
   border: none;
   color: white;
-  padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
@@ -125,7 +124,11 @@
   font-weight: 600;
   font-size: 20px;
   text-transform: uppercase;
-  
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
 }
 
 .instagramButton {

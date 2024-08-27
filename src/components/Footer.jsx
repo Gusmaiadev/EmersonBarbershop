@@ -31,8 +31,8 @@ function Footer({id}){
                           <a href="https://wa.me/5511942463329"><p className={styles.social_text}>(11) 94246-3329</p></a>
                     </div>
                     <div className={styles.block_social_contact}>
-                          <a href="mailto:emersonbarbershop@gmail.com"><img src={iconEmail} alt="Icone Instagram" /></a>
-                          <a href="mailto:emersonbarbershop@gmail.com"><p className={styles.social_text}>emersonbarbershop@gmail.com</p></a>
+                          <a href="mailto:emersons82657@gmail.com"><img src={iconEmail} alt="Icone Instagram" /></a>
+                          <a href="mailto:emersons82657@gmail.com"><p className={styles.social_text}>emersons82657@gmail.com</p></a>
                     </div>
               </div>
               <div className={styles.area_info_footer}>
