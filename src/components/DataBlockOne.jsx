@@ -2,31 +2,50 @@ import React, { useState, useEffect, useRef } from 'react';
 import styles from '../styles/DataBlockOne.module.css';
 import CountUp from 'react-countup';
 
-function DataBlockOne({id}) {
+function DataBlockOne({ id }) {
   const [hasAnimated, setHasAnimated] = useState(false);
   const sectionRef = useRef(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
+    const handleScroll = () => {
+      const rect = sectionRef.current.getBoundingClientRect();
+      if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+        setHasAnimated(true);
+        window.removeEventListener('scroll', handleScroll);
+      }
+    };
+
+    const observer = 'IntersectionObserver' in window ? new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {
           setHasAnimated(true);
-          observer.disconnect(); // Desconecta o observer após a animação para evitar que seja disparada novamente
+          observer.disconnect();
         }
       },
-      { threshold: 0.8 } // Quando 50% da seção estiver visível, dispara a animação
-    );
+      { threshold: 0.8 }
+    ) : null;
 
-    if (sectionRef.current) {
+    if (observer && sectionRef.current) {
       observer.observe(sectionRef.current);
+    } else {
+      window.addEventListener('scroll', handleScroll);
     }
 
     return () => {
       if (observer && sectionRef.current) {
         observer.unobserve(sectionRef.current);
       }
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  useEffect(() => {
+    if (hasAnimated) {
+      sectionRef.current.style.display = 'none';
+      sectionRef.current.offsetHeight; // força o reflow
+      sectionRef.current.style.display = 'block';
+    }
+  }, [hasAnimated]);
 
   return (
     <section ref={sectionRef} className={styles.container_datablockone} id={id}>
