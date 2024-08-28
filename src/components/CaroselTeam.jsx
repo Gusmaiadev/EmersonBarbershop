@@ -55,7 +55,7 @@ function CaroselTeam({id}) {
       text: 'Tiago',
       button1: 'Instagram',
       button2: 'Marcar horário',
-      link1: 'https://www.instagram.com/tiagobarber/',
+      link1: 'https://www.instagram.com/tgoaraujo_/',
       link2: 'https://booksy.com/pt-br/30413_emerson-barber-shop_barbearias_1039031_santo-andre/staffer/tiago'
     },
     {
@@ -63,7 +63,7 @@ function CaroselTeam({id}) {
       text: 'Jackson',
       button1: 'Instagram',
       button2: 'Marcar horário',
-      link1: 'https://www.instagram.com/jacksonbarber/',
+      link1: 'https://www.instagram.com/jackson.markes.98/',
       link2: 'https://booksy.com/pt-br/30413_emerson-barber-shop_barbearias_1039031_santo-andre/staffer/jackson'
     }
   ];

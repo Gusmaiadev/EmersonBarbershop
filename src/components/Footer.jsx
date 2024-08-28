@@ -23,16 +23,16 @@ function Footer({id}){
               <div className={styles.area_info_footer}>
                     <h4 className={styles.title_contact}>Contato</h4>
                     <div className={styles.block_social_contact}>
-                        <a href="https://www.instagram.com/emersonbarbershop_/"><img src={iconInstagram} alt="Icone Instagram" /></a>
-                        <a href="https://www.instagram.com/emersonbarbershop_/"><p className={styles.social_text}>@emersonbarbershop_</p></a>
+                        <a target="_blank" href="https://www.instagram.com/emersonbarbershop_/"><img src={iconInstagram} alt="Icone Instagram" /></a>
+                        <a target="_blank" href="https://www.instagram.com/emersonbarbershop_/"><p className={styles.social_text}>@emersonbarbershop_</p></a>
                     </div>
                     <div className={styles.block_social_contact}>
-                          <a href="https://wa.me/5511942463329"><img src={iconWhats} alt="Icone Whatsapp" /></a>
-                          <a href="https://wa.me/5511942463329"><p className={styles.social_text}>(11) 94246-3329</p></a>
+                          <a target="_blank" href="https://wa.me/5511942463329"><img src={iconWhats} alt="Icone Whatsapp" /></a>
+                          <a target="_blank" href="https://wa.me/5511942463329"><p className={styles.social_text}>(11) 94246-3329</p></a>
                     </div>
                     <div className={styles.block_social_contact}>
-                          <a href="mailto:emersons82657@gmail.com"><img src={iconEmail} alt="Icone Instagram" /></a>
-                          <a href="mailto:emersons82657@gmail.com"><p className={styles.social_text}>emersons82657@gmail.com</p></a>
+                          <a target="_blank" href="mailto:emersons82657@gmail.com"><img src={iconEmail} alt="Icone Instagram" /></a>
+                          <a target="_blank" href="mailto:emersons82657@gmail.com"><p className={styles.social_text}>emersons82657@gmail.com</p></a>
                     </div>
               </div>
               <div className={styles.area_info_footer}>
