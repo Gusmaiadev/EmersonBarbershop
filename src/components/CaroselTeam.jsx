@@ -6,6 +6,8 @@ import EmersonPhoto from '../assets/foto_emerson.png';
 import CleitonPhoto from '../assets/foto_cleiton.png';
 import DanielPhoto from '../assets/foto_daniel.png';
 import DanPhoto from '../assets/foto_dan.png';
+import TiagoPhoto from '../assets/foto_tiago.png';
+import JacksonPhoto from '../assets/foto_jakson.png';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
@@ -21,32 +23,48 @@ function CaroselTeam({id}) {
       text: 'Emerson',
       button1: 'Instagram',
       button2: 'Marcar horário',
-      link1: 'https://www.instagram.com/emersonbarbershop_/', // Link para o Instagram do Emerson
-      link2: 'https://booksy.com/pt-br/30413_emerson-barber-shop_barbearias_1039031_santo-andre/staffer/49572#ba_s=seo' // Link para agendar com o Emerson
+      link1: 'https://www.instagram.com/emersonbarbershop_/',
+      link2: 'https://booksy.com/pt-br/30413_emerson-barber-shop_barbearias_1039031_santo-andre/staffer/49572#ba_s=seo'
     },
     {
       image: CleitonPhoto,
       text: 'Cleitinho',
       button1: 'Instagram',
       button2: 'Marcar horário',
-      link1: 'https://www.instagram.com/cleyton.p.sousa/', // Link para o Instagram do Cleiton
-      link2: 'https://booksy.com/pt-br/30413_emerson-barber-shop_barbearias_1039031_santo-andre/staffer/222888#ba_s=seo' // Link para agendar com o Cleiton
+      link1: 'https://www.instagram.com/cleyton.p.sousa/',
+      link2: 'https://booksy.com/pt-br/30413_emerson-barber-shop_barbearias_1039031_santo-andre/staffer/222888#ba_s=seo'
     },
     {
       image: DanielPhoto,
       text: 'Daniel',
       button1: 'Instagram',
       button2: 'Marcar horário',
-      link1: 'https://www.instagram.com/____d.araujo09/', // Link para o Instagram do Daniel
-      link2: 'https://booksy.com/pt-br/30413_emerson-barber-shop_barbearias_1039031_santo-andre/staffer/53570#ba_s=seo' // Link para agendar com o Daniel
+      link1: 'https://www.instagram.com/____d.araujo09/',
+      link2: 'https://booksy.com/pt-br/30413_emerson-barber-shop_barbearias_1039031_santo-andre/staffer/53570#ba_s=seo'
     },
     {
       image: DanPhoto,
       text: 'Dan',
       button1: 'Instagram',
       button2: 'Marcar horário',
-      link1: 'https://www.instagram.com/d4n.bernd/', // Link para o Instagram do Dan
-      link2: 'https://booksy.com/pt-br/30413_emerson-barber-shop_barbearias_1039031_santo-andre/staffer/359961#ba_s=seo' // Link para agendar com o Dan
+      link1: 'https://www.instagram.com/d4n.bernd/',
+      link2: 'https://booksy.com/pt-br/30413_emerson-barber-shop_barbearias_1039031_santo-andre/staffer/359961#ba_s=seo'
+    },
+    {
+      image: TiagoPhoto,
+      text: 'Tiago',
+      button1: 'Instagram',
+      button2: 'Marcar horário',
+      link1: 'https://www.instagram.com/tiagobarber/',
+      link2: 'https://booksy.com/pt-br/30413_emerson-barber-shop_barbearias_1039031_santo-andre/staffer/tiago'
+    },
+    {
+      image: JacksonPhoto,
+      text: 'Jackson',
+      button1: 'Instagram',
+      button2: 'Marcar horário',
+      link1: 'https://www.instagram.com/jacksonbarber/',
+      link2: 'https://booksy.com/pt-br/30413_emerson-barber-shop_barbearias_1039031_santo-andre/staffer/jackson'
     }
   ];
 
@@ -104,6 +122,14 @@ function CaroselTeam({id}) {
     };
   }, []);
 
+  const getSlidePosition = (index) => {
+    const position = (index - activeIndex + slides.length) % slides.length;
+    if (position === 0) return styles.act;
+    if (position === 1) return styles.next;
+    if (position === slides.length - 1) return styles.prev;
+    return '';
+  };
+
   return (
     <section className={styles.box_carosel} id={id}>
       <div className={styles.title_text}>
@@ -121,14 +147,11 @@ function CaroselTeam({id}) {
               <div
                 key={index}
                 className={`${styles.slide} 
-                  ${index === activeIndex ? styles.act : ''} 
-                  ${index === (activeIndex - 1 + slides.length) % slides.length ? styles.prev : ''} 
-                  ${index === (activeIndex + 1) % slides.length ? styles.next : ''}
-                  ${index === (activeIndex + 2) % slides.length ? styles.newNext : ''}
+                  ${getSlidePosition(index)}
                   ${index % 2 === 0 ? styles.redCard : styles.blueCard}`}
                 onClick={() => {
-                  if (index === (activeIndex + 1) % slides.length) next();
-                  if (index === (activeIndex - 1 + slides.length) % slides.length) prev();
+                  if (getSlidePosition(index) === styles.next) next();
+                  if (getSlidePosition(index) === styles.prev) prev();
                   resetInteractionTimeout();
                 }}
               >
